@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="Two"
+            type="com.mahdi.sharedpreferences.viewmodel.Viewmodel2" />
+
+        <variable
+            name="TwoClick"
+            type="com.mahdi.sharedpreferences.viewmodel.Clicks" />
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/Rel1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="40dp"
+        tools:context=".TwoActivity">
+
+
+        <TextView
+            android:id="@+id/txtone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@{Two.title}"
+            android:textColor="@color/black"
+            android:textSize="33dp" />
+
+
+        <Button
+            android:id="@+id/Btn1"
+            android:layout_width="250dp"
+            android:layout_height="66dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="@{(v) -> TwoClick.ClickOne(v)}"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+
+</layout>
